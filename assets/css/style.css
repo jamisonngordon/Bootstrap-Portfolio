@@ -1,6 +1,10 @@
 body {
     margin: 0;
 }
+html {
+    position: relative;
+    min-height: 100%;
+}
 .header {
     border-bottom: 2px solid #cccccc;
     background-color: #ffffff;
@@ -24,8 +28,6 @@ body {
     color: white;
     text-align: center;
     font-size: 30px;
-    padding-top: 15px;
-    height: 89px;
     font-weight: bold;
     font-family: 'Georgia', Times, Times New Roman, serif;
 }
@@ -59,30 +61,128 @@ body {
 .background-image {
     width: 100%;
     height: 100%;
-    position: absolute;
-    z-index: 1;
+    background-image: url(../images/stripes-light.png);
+    background-size: contain;
 }
 .body-container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    min-height: 1120px;
     position: relative;
 }
 .footer {
-    position: absolute;
-    bottom: 0;
-    z-index: 3;
     width: 100%;
     height: 60px;
     border-top: 8px solid #4aaaa5;
     background-color: #666666;
+    position: absolute;
+    bottom: 0;
 }
 .footer-text{
     text-align: center;
     color: #e0e0e0;
-    margin-top: 39px;
+    margin-top: 20px;
     font-size: 13px;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 a {
     text-decoration: none !important;
+}
+
+@media only screen and (max-width: 980px) {
+    
+    .name {
+        grid-area: name;
+        width: 250px;
+        height: 89px;
+        margin-left: 50px;
+        background-color: #4aaaa5;
+        float: right;
+    }
+    .nav {
+        float: left;
+        grid-area: nav;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        margin-right: 50px;
+    }
+    .header-grid {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .name {
+        grid-area: name;
+        width: 250px;
+        height: 89px;
+        margin-left: 20px;
+        background-color: #4aaaa5;
+        float: right;
+    }
+    .nav {
+        float: left;
+        grid-area: nav;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        margin-right: 20px;
+        width: auto;
+    }
+    .header-grid {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .name-text {
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        padding-top: 30px;
+        height: 89px;
+        font-weight: bold;
+        font-family: 'Georgia', Times, Times New Roman, serif;
+    }
+    .name {
+        grid-area: name;
+        width: auto;
+        height: 89px;
+        margin-left: 0;
+        background-color: #4aaaa5;
+    }
+    .nav {
+        grid-area: nav;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        margin: auto;
+        width: auto;
+        height: 65px;
+    }
+    .header-grid {
+        display: grid;
+        grid-template-columns: auto;
+        height: 155px;
+        grid-template-areas: 
+        "name"
+        "nav";
+    }
+    .nav-text {
+        height: 17px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: #999999;
+        font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    }
+    .nav-text-about {
+        padding-left: 0;
+    }
 }
