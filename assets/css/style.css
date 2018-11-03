@@ -58,6 +58,12 @@ html {
 .nav-text:hover {
     color: #50B7B1;
 }
+.content-title {
+    color: #4aaaa5;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
 .background-image {
     width: 100%;
     height: 100%;

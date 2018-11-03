@@ -11,12 +11,6 @@
     margin-right: 30px;
     border-bottom: 3px solid #dddddd;
 }
-.content-title {
-    color: #4aaaa5;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Georgia', Times, Times New Roman, serif;
-}
 .image-and-text {
     grid-area: image-text;
     margin-left: 30px;
